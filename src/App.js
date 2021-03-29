@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from '.assets/images/logo.svg';
 import './assets/css/App.css';
+import { Menu } from './components/menu';
+import Header1 from './components/conteiner/Header';
+import Footer1 from './components/conteiner/Footer';
+
 
 function App() {
+  let objHeader = {
+    titulo: "Del Plata Ingeniería",
+    parrafo: "Challenge realizado en react"
+  }
+  const fecha = new Date().getFullYear();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+      <Header1 titulo={objHeader.titulo} parrafo={objHeader.parrafo} />
+      <div className="menu text-center" style={{ "marginTop": "20px" }}  >
+        <Menu />
+      </div>
+      <Footer1 fecha={fecha} />
+    </>
   );
 }
 
