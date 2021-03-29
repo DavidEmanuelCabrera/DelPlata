@@ -1,7 +1,7 @@
 # **Used tools**
-.react
-.react-router-dom
-.bootstrap
+react.
+react-router-dom.
+bootstrap.
 
 # Getting Started with Create React App
 
